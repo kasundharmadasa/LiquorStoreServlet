@@ -1,4 +1,6 @@
-package com.sample.model;
+package com.sample;
+
+import com.sample.model.LiquorType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +8,7 @@ import java.util.List;
 /**
  * Created by kasun on 5/24/17.
  */
-public class LiquorSelect {
+public class LiquorService {
 
     public List getAvailableBrands(LiquorType type){
 
