@@ -25,8 +25,8 @@ pipeline {
          stage ('deploy code to App Server') {
              steps  {
                  echo  'deployed'
-                 sh ' cp /tmp/key.pem /tmp/jenkinskey.pem && chmod 400  /tmp/jenkinskey.pem'
-                 sh 'scp -i  /tmp/jenkinskey.pem -o StrictHostKeyChecking=no codebase/target/SampleServlet.war  ec2-user@172.31.12.75:/var/lib/tomcat/webapps'
+                 sh ' cp /tmp/key.pem /tmp/jenkinskey2.pem && chmod 400  /tmp/jenkinskey2.pem'
+                 sh 'scp -i  /tmp/jenkinskey2.pem -o StrictHostKeyChecking=no codebase/target/SampleServlet.war  ec2-user@172.31.12.75:/var/lib/tomcat/webapps'
              }
         }
         stage ('Test code on App Server') {
