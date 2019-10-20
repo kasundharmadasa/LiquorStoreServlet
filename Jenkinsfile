@@ -25,7 +25,7 @@ pipeline {
          stage ('deploy code to App Server') {
              steps  {
                  echo  'deployed'
-                 sh ' cp /tmp/key.pem jenkinskey3.pem && chmod 400  /tmp/jenkinskey3.pem'
+                 sh ' cp /tmp/key.pem jenkinskey3.pem && chmod 400  jenkinskey3.pem'
                  sh 'scp -i  jenkinskey3.pem -o StrictHostKeyChecking=no codebase/target/SampleServlet.war  ec2-user@172.31.12.75:/var/lib/tomcat/webapps'
              }
         }
