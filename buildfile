@@ -6,7 +6,7 @@ pipeline {
                  echo "this is just an echo"
              }
          }
-         stage Second stage') {
+         stage ('Second stage') {
              steps {
                  echo "this is just another echo"
              }
