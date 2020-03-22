@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
          stage ('Checking Deploy tool and initial cleanup') {
              steps {
