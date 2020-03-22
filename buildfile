@@ -3,12 +3,15 @@ pipeline {
     stages {
          stage ('First stage') {
              steps {
-                 echo "this is just an echo"
+                 echo "Running code package"
+                 sh 'mvn clean package'
              }
          }
          stage ('Second stage') {
              steps {
-                 echo "this is just another echo"
+                 echo "Deploying code"
+                 sh 'sudo cp target/WinePortal.war /usr/share/tomcat/webapps'
+                 echo "Successfully deployed"
              }
          }
 
