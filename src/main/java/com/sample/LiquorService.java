@@ -12,11 +12,13 @@ public class LiquorService {
 
     public List getAvailableBrands(LiquorType type){
 
+        // this is just a test
         List brands = new ArrayList();
 
         if(type.equals(LiquorType.WINE)){
             brands.add("Adrianna Vineyard");
             brands.add(("J. P. Chenet"));
+            brands.add(("O. J. Naija"));
 
         }else if(type.equals(LiquorType.WHISKY)){
             brands.add("Glenfiddich");
